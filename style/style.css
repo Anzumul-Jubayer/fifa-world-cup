@@ -24,6 +24,34 @@
   padding: 15px 25px;
   border: none;
 }
+@keyframes banner-animation{
+    0%{
+       opacity: 0;
+       transform: translate(-20px);
+    }
+    50%{
+      opacity: 0.5;
+      transform: translate(-10px);
+    }
+    100%{
+      opacity: 1;
+      transform: translate(0px);
+    }
+}
+@keyframes banner-player-animation{
+    0%{
+       opacity: 0.5;
+       transform: translate(-20px);
+    }
+    50%{
+      opacity: 0.7;
+      transform: translate(-10px);
+    }
+    100%{
+      opacity: 1;
+      transform: translate(0px);
+    }
+}
 
 /* header */
 .banner {
@@ -33,7 +61,7 @@
   border-radius: 30px;
   padding-left: 30px;
   margin: 80px auto;
-  
+  animation:banner-animation 0.7s ease-out forwards;
 }
 .banner-content{
     flex: 1;
@@ -56,6 +84,7 @@
   display: block;
   max-width: 100%;
   flex: 1;
+  animation: banner-player-animation 1s ease-in infinite;
 }
 /* Main */
 .upcoming-matches {
@@ -70,7 +99,7 @@
   text-align: center;
   padding: 30px;
   border-radius: 10px;
-  width: 25%;
+  width: 30%;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -152,7 +181,7 @@ footer a {
 @media screen and (max-width:992px) {
     .banner{
         flex-direction: row;
-        text-align: center;
+       
         padding: 0;
         margin: 20px;
         border-radius: 10px;
@@ -195,7 +224,7 @@ footer a {
 
     .banner{
         flex-direction: column;
-        text-align: center;
+       
         padding: 0;
         margin: 20px;
         border-radius: 10px;
@@ -203,6 +232,7 @@ footer a {
     .banner-content{
         padding: 0 20px;
          margin: 40px auto;
+        text-align: center;
     }
     .banner-content h2{
         font-size: 2.3rem;
